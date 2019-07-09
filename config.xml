@@ -6,6 +6,6 @@
 	<浏览器驱动路径>D:/Program Files (x86)/Java/driver/chromedriver.exe</浏览器驱动路径>
 	<!-- <浏览器驱动路径>D:\eclipse-workspace\UTest\src\com\gxyj\util\chromedriver.exe</浏览器驱动路径> -->
 	<查询元素等待时长>20</查询元素等待时长>
-	<失败重跑次数>2</失败重跑次数>
+	<失败重跑次数>3</失败重跑次数>
 	<对象库文件路径>./object.xml</对象库文件路径>
 </参数配置>
