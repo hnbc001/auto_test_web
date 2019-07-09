@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="供销e家web端B2C自动化测试">
+  <listeners>
+  	<listener class-name="com.gxyj.util.MyListener"/>
+  	<listener class-name="com.gxyj.util.LTestReport"/>
+  </listeners>  
+  <test name="gxyjTest1">
+    <classes>
+      <class name="com.gxyj.web.Security01_B2C_Liuteng"/>
+      <class name="com.gxyj.web.Security02_B2C_Liuteng"/>
+      <class name="com.gxyj.web.Security03_B2C_Liuteng"/>
+      <class name="com.gxyj.web.Security04_B2C_Liuteng"/>
+      <class name="com.gxyj.web.Security05_B2C_Liuteng"/>
+      <class name="com.gxyj.web.Security06_B2C_Liuteng"/>
+      <class name="com.gxyj.web.Security07_B2C_Liuteng"/>
+      <class name="com.gxyj.web.Security08_B2C_Liuteng"/>
+      <class name="com.gxyj.web.Security09_B2C_Liuteng"/>
+      <class name="com.gxyj.web.Security10_B2C_Liuteng"/>
+    </classes>
+  </test>
+</suite>

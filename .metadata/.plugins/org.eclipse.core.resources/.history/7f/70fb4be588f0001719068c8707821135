@@ -1,0 +1,17 @@
+package com.hnbc.forever005;
+
+public class TestToString {
+	
+	public static void main(String[] args) {
+
+		
+		
+		
+		TestObject testObject = new TestObject("aaa");
+	}
+	String string;
+	public TestObject(String string){
+		this.string = string;
+	}
+
+}

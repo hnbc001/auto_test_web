@@ -1,0 +1,26 @@
+/**
+ * @author chihongyuan
+ * 首页限时秒杀展示
+ */
+package com.gxyj.app;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class App008_Index_Chihy extends TestBase {
+
+	@Test
+	public void timeLimit() {
+		
+		String text = null;
+		try {
+			text = locator.getTextByUIA("l 限时秒杀");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Reporter.log( "【fail】008首页限时秒杀栏位展示失败");
+		}
+		checkPoint.equals(text, "l 限时秒杀", "【fail】008首页限时秒杀栏位展示失败");
+		checkPoint.result("【pass】008首页限时秒杀栏位展示成功");
+	}
+}

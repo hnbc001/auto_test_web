@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[【pass】Web003_B2C:地区切换按钮展示成功]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="34877" started-at="2018-10-08T08:34:49Z" finished-at="2018-10-08T08:35:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="34877" started-at="2018-10-08T08:34:49Z" finished-at="2018-10-08T08:35:24Z">
+      <class name="com.gxyj.web.Web003_B2C_Chihy">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:com.gxyj.web.Web003_B2C_Chihy@443f6b14]" name="tearUp" is-config="true" duration-ms="4165" started-at="2018-10-08T16:34:49Z" finished-at="2018-10-08T16:34:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+        <test-method status="PASS" signature="check()[pri:0, instance:com.gxyj.web.Web003_B2C_Chihy@443f6b14]" name="check" is-config="true" duration-ms="3" started-at="2018-10-08T16:34:53Z" finished-at="2018-10-08T16:34:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check -->
+        <test-method status="PASS" signature="area()[pri:0, instance:com.gxyj.web.Web003_B2C_Chihy@443f6b14]" name="area" duration-ms="27451" started-at="2018-10-08T16:34:53Z" finished-at="2018-10-08T16:35:21Z">
+          <reporter-output>
+            <line>
+              <![CDATA[【pass】Web003_B2C:地区切换按钮展示成功]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- area -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.gxyj.web.Web003_B2C_Chihy@443f6b14]" name="tearDown" is-config="true" duration-ms="3243" started-at="2018-10-08T16:35:21Z" finished-at="2018-10-08T16:35:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.gxyj.web.Web003_B2C_Chihy -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

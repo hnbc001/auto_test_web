@@ -1,0 +1,22 @@
+/**
+ * @author chihongyuan
+ * 列表页展示
+ */
+
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+import com.gxyj.util.TestBase;
+
+public class App097_List_Chihy extends TestBase {
+
+	@Test
+	public void list() {
+		
+		locator.clickByUIA("分类");
+		locator.clickByUIA("米面杂粮");
+		checkPoint.equals(locator.getTextByUIA("大米")!=null, true, "【fail】097APP列表页1展示失败");
+		checkPoint.result("【pass】097APP列表页1展示正常");
+	}
+}

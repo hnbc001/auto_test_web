@@ -1,0 +1,270 @@
+package com.gxyj.util;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import com.android.uiautomator.core.UiSelector;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class Locator {
+	
+	//private WebDriver webDriver = null;
+	private AndroidDriver androidDriver = null;
+	private XmlParser xmlParser = null;
+	
+	/*public Locator(WebDriver driver, String path) {
+		
+		this.webDriver = driver;
+		xmlParser = new XmlParser(path);
+	}*/
+	
+	public Locator(AndroidDriver androidDriver, String path) {
+		this.androidDriver = androidDriver;
+		xmlParser = new XmlParser(path);
+	}
+	
+	private By getBy(String page, String name) {
+		
+		String type = xmlParser.getAttri("//" + page + "/" + name, "type");
+		String value = xmlParser.getAttri("//" + page + "/" + name, "value");
+		
+		By by = null;
+		switch (type) {
+		case "id":
+			by = By.id(value);
+			break;
+			
+		case "name":
+			by = By.name(value);
+			break;
+			
+		case "classname":
+			by = By.className(value);
+			break;
+			
+		case "xpath":
+			by = By.xpath(value);
+			break;
+
+		default:
+			
+			System.out.println("不支持该定位方式：" + type);
+			break;
+		}
+		
+		return by;
+	}
+	
+	
+	public void to(String url) {
+		
+		androidDriver.get(url);
+	}
+	
+	public void quit(AndroidDriver androidDriver) {
+		
+		try {
+			//androidDriver.close();
+			androidDriver.quit();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void wait(int second) {
+		
+		try {
+			Thread.sleep(second*1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void clickByButton(String page, String name) {
+		
+		androidDriver.findElement(getBy(page, name)).click();
+	}
+	
+	public void sendkeysByXml(String page, String name, String str) {
+		
+		androidDriver.findElement(getBy(page, name)).click();
+		androidDriver.findElement(getBy(page, name)).clear();
+		androidDriver.findElement(getBy(page, name)).sendKeys(str);
+	}
+	
+	public void sendKeysByAUIA(String str, String sendkeys) {
+		
+		WebElement element = (WebElement)(new UiSelector().text(str));
+		androidDriver.findElementByAndroidUIAutomator("").sendKeys(sendkeys);
+	}
+	
+	public String getText(String page, String name) {
+		
+		return androidDriver.findElement(getBy(page, name)).getText();
+	}
+	
+	public String getAttri(String page, String name, String str) {
+		
+		WebElement element = androidDriver.findElement(getBy(page, name));
+		return element.getAttribute(str);
+	}
+	
+	public List<String> getTexts(String page, String name) {
+		
+		List<String> result = new ArrayList<String>();
+		List<WebElement> elements = androidDriver.findElements(getBy(page, name));
+		if (elements.size()>0) {
+			for (WebElement element : elements) {
+				result.add(element.getText());
+			}
+		}else {
+			System.out.println("未找到对象");
+		}
+		
+		return result;
+	}
+
+	public List<String> getAttris(String page, String name, String str) {
+		
+		List<String> result = new ArrayList<>();
+		List<WebElement> elements = androidDriver.findElements(getBy(page, name));
+		if (elements.size()>0) {
+			for (WebElement element : elements) {
+				result.add(element.getAttribute(str));
+			}
+		} else {
+			System.out.println("未找到对象");
+		}
+		
+		return result;
+	}
+	
+	public void selectByValue(String page, String name, String value) {
+		
+		WebElement element = androidDriver.findElement(getBy(page, name));
+		Select select = new Select(element);
+		select.selectByValue(value);
+	}
+	
+	public void selectByRandom(String page, String name) {
+		
+		WebElement element = androidDriver.findElement(getBy(page, name));
+		Select select = new Select(element);
+		int index = new Random().nextInt(select.getOptions().size());
+		select.selectByIndex(index);
+		wait(1);
+	}
+	
+	public int elementsCount(String page, String name){
+		
+		try {
+			List<WebElement> elements = androidDriver.findElements(getBy(page, name));
+			return elements.size();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return 0;
+		}
+	}
+	
+	public boolean elementIsExist(String page, String name) {
+		
+		try {
+			androidDriver.findElement(getBy(page, name));
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public boolean elementsIsExist(String page, String name) {
+		
+		boolean flag = false;
+		
+		try {
+			List<WebElement> elements = androidDriver.findElements(getBy(page, name));
+			if (elements.size()>0) {
+				flag = true;
+			} 
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return flag;
+	}
+	
+	public List<String> clickAndGetText(By tab, By target) {
+		
+		List<WebElement> elements = androidDriver.findElements(tab);
+		List<String> result = new ArrayList<String>();
+		for (WebElement element : elements) {
+			element.click();
+			wait(1);
+			List<WebElement> texts = androidDriver.findElements(target);
+			for (WebElement text : texts) {
+				result.add(text.getText());
+			}
+		}
+		
+		return result;
+	}
+	
+	public List<String> clickAndGetAttri(By tab, By target, String str) {
+		
+		List<WebElement> elements = androidDriver.findElements(tab);
+		List<String> result = new ArrayList<String>();
+		for (WebElement element : elements) {
+			element.click();
+			wait(1);
+			List<WebElement> texts = androidDriver.findElements(target);
+			for (WebElement text : texts) {
+				result.add(text.getAttribute(str));
+			}
+		}
+		
+		return result;
+	}
+	
+	public String getUrl() {
+		
+		return androidDriver.getCurrentUrl();
+	}
+	
+	
+	
+	public void clickByXml(String page, String name) {
+		
+		androidDriver.findElement(getBy(page, name)).click();
+	}
+	
+	
+	public void login() {	
+		androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"我的\")").click();
+		androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"登录\")").click();
+		androidDriver.findElementById("com.i2f.emallmobile:id/iv_deleteMobile").click();
+		androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"请输入手机号/用户名/邮箱\")").sendKeys("13611111111");
+		androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"请输入密码\")").sendKeys("1111qqqq");
+		androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"登录\")").click();
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+

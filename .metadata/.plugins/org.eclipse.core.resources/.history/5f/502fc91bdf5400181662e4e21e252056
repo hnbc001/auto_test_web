@@ -1,0 +1,42 @@
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+import com.gxyj.util.TestBase;
+
+public class App01 extends TestBase {
+
+	@Test
+	public void login() throws Exception{
+		/*androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"我的\")").click();
+		androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"登录\")").click();
+		locator.clickByXml("登录页", "删除按钮");
+		androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"请输入手机号/用户名/邮箱\")").sendKeys("13611111111");
+		androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"请输入密码\")").sendKeys("1111qqqq");
+		androidDriver.findElementByAndroidUIAutomator("new UiSelector().text(\"登录\")").click();
+		checkPoint.equals(locator.getText("首页", "用户名"), "gxyj_z7k012t9p1w...", "【fail】APP登录失败");
+		checkPoint.result("【pass】APP登录成功");*/
+		
+		//androidDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'请输入密码')]")).sendKeys("1111qqqq");
+	
+		locator.clickByXml("首页", "我的");
+		locator.clickByXml("我的", "登录注册");
+		locator.clickByXml("登录页", "删除按钮");
+		locator.sendkeysByXml("登录页", "账号", "13611111111");
+		locator.sendkeysByXml("登录页", "密码", "1111qqqq");
+		locator.clickByXml("登录页", "登录");
+		checkPoint.equals(locator.getText("首页", "用户名"), "1gxyj_z7k012t9p1w...", "【fail】APP登录失败");
+		checkPoint.result("【pass】APP登录成功");
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

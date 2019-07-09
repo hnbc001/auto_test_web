@@ -1,0 +1,32 @@
+/**
+ * @author chihongyuan
+ * 订单页展示
+ */
+package com.gxyj.app;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class App077_OrderPage_Chihy extends TestBase {
+
+	@Test
+	public void sumMoney() {
+		
+		int x = locator.getSize().width;
+		int y = locator.getSize().height;
+		int duration = 2000;
+		locator.swipe(x/2, y/2, x/2, (int)(y*0.1), duration);
+		
+		String text = null;
+		try {
+			text = locator.getTextByUIA("商品总金额：");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Reporter.log("【fail】077订单页商品总金额展示失败");
+		}
+		
+		checkPoint.equals(text, "商品总金额：", "【fail】077订单页商品总金额展示失败");
+		checkPoint.result("【pass】077订单页商品总金额展示成功");
+	}
+}

@@ -1,0 +1,24 @@
+/**
+ * @author chihongyuan
+ * 首页必买优品展示
+ */
+package com.gxyj.app;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class App006_Index_Chihy extends TestBase {
+
+	@Test
+	public void buyGoodProducts() {
+		
+		String text = null;
+		try {
+			text = locator.getTextByUIA("必买优品");
+		} catch (Exception e) {
+			Reporter.log("【fail】006首页必买优品栏位展示失败");	
+		}
+		checkPoint.equals(text, "必买优品", "【fail】006首页必买优品栏位展示失败");
+		checkPoint.result("【pass】006首页必买优品栏位展示成功");
+	}
+}

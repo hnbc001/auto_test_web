@@ -1,0 +1,154 @@
+package com.gxyj.util;
+
+/*import org.testng.Reporter;
+import org.testng.asserts.Assertion;
+import org.testng.asserts.IAssert;
+
+public class CheckPoint extends Assertion {
+	
+	int flag = 0;
+
+	@Override
+	public void onBeforeAssert(IAssert a) {
+		System.out.println("开始对测试案例进行断言");
+	}
+	
+	
+	public void equals(int actual, int expected){
+		
+		try {
+			assertEquals(actual, expected);
+
+		} catch (AssertionError ae) {
+			// TODO Auto-generated catch block
+			ae.printStackTrace();
+			flag++;
+		}
+	}
+	
+	public void equals(String actual, String expected){
+		
+		try {
+			assertEquals(actual, expected);	
+			
+		} catch (AssertionError ae) {
+			// TODO Auto-generated catch block
+			ae.printStackTrace();
+			flag++;
+			
+		}
+	}
+	
+	public void equals(Boolean actual, Boolean expected){
+		
+		try {
+			assertEquals(actual, expected);
+			
+		} catch (AssertionError ae) {
+			// TODO Auto-generated catch block
+			ae.printStackTrace();
+			flag++;
+		}
+	}
+	
+	public void isFalse(String message){
+		
+		try {
+			assertEquals(true, false, message);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void result(String rightMessage, String errorMessage){
+		
+		if (flag == 0) {
+			Reporter.log(rightMessage);
+		} else {
+			Reporter.log(errorMessage);
+		}
+		
+		try {
+			assertEquals(flag, 0);
+			Reporter.log(rightMessage);
+		} catch (AssertionError ae) {
+			// TODO Auto-generated catch block
+			ae.printStackTrace();
+			Reporter.log(errorMessage);
+		}
+	}	
+}*/
+
+import org.testng.Reporter;
+import org.testng.asserts.Assertion;
+import org.testng.asserts.IAssert;
+
+public class CheckPoint extends Assertion{
+	
+	int flag = 0;
+	
+	@Override
+	public void onBeforeAssert(IAssert assertCommand){
+		System.out.println("断言开始了.");
+	}
+	
+	public void equals(int actual, int expected, String message){
+		
+		try {
+			//Assert.assertEquals(actual, expected);
+			assertEquals(actual, expected);
+		} catch (Exception e) {
+			flag++;
+		}
+	}
+	
+	public void equals(String actual, String expected, String message){
+		
+		try {
+			//Assert.assertEquals(actual, expected);
+			assertEquals(actual, expected);
+		} catch (Exception e) {
+			flag++;
+		}
+	}
+	
+	public void equals(Boolean actual, Boolean expected, String message){
+		
+		try {
+			//Assert.assertEquals(actual, expected);
+			assertEquals(actual, expected);
+		} catch (Exception e) {
+			flag++;
+		}
+	}
+	
+	public void isFlase(String message){
+		//Assert.assertEquals(true, false, message);
+		assertEquals(true, false, message);
+	}
+	
+	public void result(String message){
+		//Assert.assertEquals(flag, 0);
+		assertEquals(flag, 0);
+		
+		//System.out.println(message);
+		Reporter.log(message);
+	}
+	
+	/*public void jsonValueEquals(String text, String xpath, String expected, String message){
+		
+		try {
+			assertEquals(根据text和xpath解析json字符换，然后和expected作比较, expected);
+		} catch (Exception e) {
+			flag++;
+		}
+	}*/
+
+}
+
+
+
+
+
+

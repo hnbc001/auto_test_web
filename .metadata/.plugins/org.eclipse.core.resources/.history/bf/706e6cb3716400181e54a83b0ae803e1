@@ -1,0 +1,18 @@
+/**
+ * @author chihongyuan
+ * 首页地区下拉列表展示
+ */
+
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App003_Index_Chihy extends TestBase {
+	
+	@Test
+	public void area() {
+		
+		checkPoint.equals(locator.elementIsExist("首页", "地区下拉列表"), true, "【fail】003首页地区下拉列表展示失败");
+		checkPoint.result("【pass】003首页地区下拉列表展示成功");
+	}
+}

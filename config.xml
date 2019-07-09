@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<参数配置>
+	<浏览器类型>chrome</浏览器类型>
+	<显示>false</显示><!-- 默认为true -->
+	<!-- <浏览器驱动路径>D:/Program Files (x86)/Mozilla Firefox/firefox.exe</浏览器驱动路径> -->
+	<浏览器驱动路径>D:/Program Files (x86)/Java/driver/chromedriver.exe</浏览器驱动路径>
+	<!-- <浏览器驱动路径>D:\eclipse-workspace\UTest\src\com\gxyj\util\chromedriver.exe</浏览器驱动路径> -->
+	<查询元素等待时长>20</查询元素等待时长>
+	<失败重跑次数>0</失败重跑次数>
+	<对象库文件路径>./object.xml</对象库文件路径>
+</参数配置>

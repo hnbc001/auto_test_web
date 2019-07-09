@@ -1,0 +1,16 @@
+/**
+ * @author chihongyuan
+ * 详情页展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App017_Details_Chihy extends TestBase {
+
+	@Test
+	public void productName() {
+		checkPoint.equals(locator.elementIsExist("详情页", "商品名称"), true, "【fail】017详情页名称展示失败");
+		checkPoint.result("【pass】017详情页名称展示成功");
+	}
+}

@@ -1,0 +1,23 @@
+/**
+ * @author chihongyuan
+ * 搜索页展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+import com.gxyj.util.TestBase;
+
+public class App100_Search_Chihy extends TestBase{
+
+	@Test
+	public void search() { 
+		
+		locator.clickByXml("页脚导航", "首页");
+		locator.clickByXml("首页", "搜索栏位");
+		checkPoint.equals("搜索", "搜索", "【fail】100APP搜索失败");
+		checkPoint.result("【pass】100APP搜索成功");
+	}
+	
+
+}

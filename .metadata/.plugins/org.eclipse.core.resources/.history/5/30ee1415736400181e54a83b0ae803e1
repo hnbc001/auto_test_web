@@ -1,0 +1,17 @@
+/**
+ * @author chihongyuan
+ * 首页分类导航栏展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App010_Index_Chihy extends TestBase {
+
+	@Test
+	public void classify() {
+		
+		checkPoint.equals(locator.elementIsExist("页脚导航", "分类"), true, "【fail】010页脚导航分类栏位展示失败");
+		checkPoint.result("【pass】010页脚导航分类栏位展示成功");
+	}
+}

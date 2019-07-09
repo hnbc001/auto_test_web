@@ -1,0 +1,26 @@
+/**
+ * @author chihongyuan
+ * 首页首页导航栏展示
+ */
+package com.gxyj.app;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class App009_Index_Chihy extends TestBase {
+
+	@Test
+	public void index() {
+		
+		boolean flag = false;
+		try {
+			flag = locator.elementIsExist("页脚导航", "首页");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Reporter.log("【fail】009页脚导航首页栏位展示失败");
+		}
+		checkPoint.equals(flag, true, "【fail】009页脚导航首页栏位展示失败");
+		checkPoint.result("【pass】009页脚导航首页栏位展示成功");
+	}
+}

@@ -1,0 +1,28 @@
+/**
+ * @author chihongyuan
+ * 购物车页展示
+ */
+package com.gxyj.app;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class App062_ShoppingCart_Chihy extends TestBase {
+
+	@Test
+	public void checkAll() {
+		
+		String text = null;
+		
+		try {
+			text = locator.getTextByUIA("全选");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Reporter.log("【fail】062购物车页全选展示失败");
+		}
+		
+		checkPoint.equals(text, "全选1", "【fail】062购物车页全选展示失败");
+		checkPoint.result("【pass】062购物车页全选展示成功");
+	}
+}

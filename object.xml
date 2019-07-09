@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<对象库>
+	<首页_B2C>
+		<马上登录 type="xpath" value="//li[@id='userInfo']/a" />
+	    <图标 type="xpath" value="//div[@id='newLogo']/div/a/img" />
+		<注册按钮 type="xpath" value="//ul[@class='login clearfix']/li[3]/a" />
+		<搜索栏位 type="id" value="query" />
+		<搜索按钮 type="id" value="queryButton" />
+		<地区切换按钮 type="id" value="choseCommonAddress" />
+		<轮播图 type="id" value="adListAjax" />
+		<扶贫专区 type="xpath" value="//div[@id='newNavigationStairAndSec']/a[@href='http://www.gxyj.com/fpzq/index.html']" />
+		<地方平台 type="xpath" value="//div[@id='newNavigationStairAndSec']/a[@href='http://www.gxyj.com/dfptlby/index.html']" />   
+ 		<退出 type="xpath" value="//li[@id='userInfo']/a" />
+ 		<!-- <春茶 type="xpath" value="//div[@id='newNavigationStairAndSec']/ul/li[2]/a" /> -->
+ 		<坚果 type="xpath" value="//div[@id='newNavigationStairAndSec']/ul/li[2]/a" />
+ 		<杂粮 type="xpath" value="//div[@id='newNavigationStairAndSec']/ul/li[3]/a" />
+ 		<蜜饯 type="xpath" value="//div[@id='newNavigationStairAndSec']/ul/li[4]/a" />
+ 		<鲜果 type="xpath" value="//div[@id='newNavigationStairAndSec']/ul/li[5]/a" />
+ 		<购物车 type="id" value="carCont" />
+ 		<我的商城 type="xpath" value="//ul[@class='login clearfix']/li[4]/a"/>
+		<我的订单 type="xpath" value="//ul[@class='login clearfix']/li[6]/a"/>
+		<网站导航 type="id" value="a-navall"/>
+ 	</首页_B2C>
+ 	<登录页_B2C>
+ 		<用户名 type="id" value="username" />
+ 		<密码 type="id" value="password" />
+ 		<登录 type="id" value="button" />
+ 		<验证码 type="id" value="validateCode"/>
+ 	</登录页_B2C>
+ 	<搜索页_B2C>
+ 		<商品价格 type="classname" value="p-price" />
+ 		<商品品牌 type="xpath" value="//div[@class='p-name']/a" />
+ 		<分类方式 type="xpath" value="//dl[@class='search_select']/dt" />
+ 		<奇异果 type="xpath" value="//a[contains(text(),'奇异果/猕猴桃')]" />
+ 		<选择价格 type="xpath" value="//dd[@class='search_price']/a[1]" />
+ 		<全部结果 type="xpath" value="//span[@class='slogn fl']" />
+ 		<综合排序 type="id" value="sortByDefault" />
+ 		<人气排序 type="id" value="sortByAMT" />
+ 		<新品排序 type="id" value="sortByTime" />
+ 		<价格排序 type="id" value="sortByPrice" />
+ 		<价格展示 type="xpath" value="//a[@id='sortByPrice']/i" />
+ 		<店铺排序 type="id" value="three" />
+ 		<大图排序 type="id" value="one" />
+ 		<店铺展示 type="xpath" value="//a[@id='three']/i" />
+ 		<店铺名称 type="xpath" value="//div[@class='cell shopName']/span" />
+ 		<店铺电话 type="xpath" value="//div[@id='s_1']/div[1]/div/div[2]" />
+ 		<店铺公司 type="xpath" value="//div[@id='s_1']/div[1]/div/div[3]" />
+ 		<店铺评分 type="xpath" value="//div[@class='store-center fl']/p" />
+ 		<店铺入口 type="xpath" value="//a[@class='n_btn-enter']" />
+ 		<相关商品 type="xpath" value="//a[@class='brow_storeNum']" />
+ 		<商品个数 type="classname" value="productBox" />
+ 		<提示信息 type="xpath" value="//div[@class='search_pmt02 mt10']/em" />
+ 		<对比栏 type="xpath" value="//div[@class='btns']/a" />
+ 	</搜索页_B2C>
+ 	<购物车页_B2C>
+ 	    <商铺名称 type="xpath" value="//div[@id='shop-name-All']/a/span" />
+ 	    <和我联系 type="xpath" value="//div[@id='shop-name-All']/a[2]/span" />
+ 	    <删除 type="xpath" value="//li[@class='td td-top']/div[@class='td-innerCon']/a" />
+ 		<去结算 type="id" value="cart_submit" />
+ 		<!-- <复选框 type="id" value="010231_0_00000000000000147535_00000000000000147535" /> --> 	    
+ 	    <复选框 type="id" value="Gxyj-SelectAllCbx1" />
+ 	    <商品名称 type="classname" value="item-title" />
+ 	    <商品单价 type="xpath" value="//div[@class='price-line']/em" />
+ 	    <商品规格 type="xpath" value="//div[@class='item-info']/div/em" />
+ 	    <商品数量 type="id" value="amt_010231_0_00000000000000147535_00000000000000147535" />
+ 	    <商品小计 type="id" value="ut_010231_0_00000000000000147535_00000000000000147535" />
+ 	    <移入关注上 type="xpath" value="//a[@productid='0000127314']/../span" />
+ 	    <删除选中商品 type="xpath" value="//li[@class='De-Pro fl']" />
+ 	    <移入关注下 type="xpath" value="//li[@class='Mo-Pro fl']" />
+ 	    <清除失效产品 type="xpath" value="//li[@class='Mi-Pro fl']" />
+ 	    <已选商品 type="xpath" value="//li[@class='YX-Pro fl mr0']" />
+ 	    <全选 type="id" value="Yh-checkbox" />
+ 	    <确认删除 type="xpath" value="//a[@class='confirmOk'][contains(text(),'删除')]" />
+ 	    <购物车空 type="xpath" value="//span[@class='title']" />
+ 	</购物车页_B2C>
+ 	<详情页_B2C>
+ 		<规格 type="id" value="00001003240000023422" />
+ 		<加入购物车 type="id" value="addTringToShopCardId1" />
+ 		<商品名称 type="xpath" value="//div[@class='goods-cont']/h1" />
+ 		<商品价格 type="id" value="prodPrice" />
+ 		<立即购买 type="id" value="nowBuy" />
+ 		<商品详情 type="xpath" value="//ul[@class='p_detail']/li" />
+ 		<运费信息 type="xpath" value="//div[@class='pro_detail']/ul" />
+ 		<修改地址 type="id" value="defaultArea"/>
+ 		<运费价格 type="id" value="prodLogistics" />
+ 		<海南 type="id" value="460000"/>
+ 		<天津 type="id" value="129999"/>
+ 		<安定县 type="id" value="469021"/>
+ 		<定城镇 type="id" value="4690211"/>
+ 		<修改运费 type="xpath" value="//ul[@class='p_detail']"/>
+ 		<自提提示 type="xpath" value="//div[@class='zititishi']/div/p/span"/>
+ 		<数量 type="id" value="nums"/>
+ 		<数量加 type="id" value="plus"/>
+ 		<数量减 type="id" value="subtract"/>
+ 		<数量提示 type="id" value="alertInfo" />
+ 		<服务 type="xpath" value="//div[@class='summary-serve clearfix']"/>
+ 		<承诺 type="xpath" value="//div[@class='summary-promise clearfix']"/>
+ 		<进店逛逛 type="classname" value="shop-gg"/>
+ 		<关注店铺 type="classname" value="shop-sc"/>
+ 		<和我联系 type="xpath" value="//a[@id='zxkfid']/span"/>
+ 		<咨询电话 type="id" value="serviceTel"/>
+ 		<收藏商品 type="classname" value="short_scsp"/>
+ 		<商铺评分 type="xpath" value="//div[@class='shop-pf']/h1"/>
+ 		<店铺公告 type="classname" value="shop-gg-top-bar"/>
+ 		<店铺提示 type="classname" value="store-tipscon"/>
+ 		<商品分类 type="classname" value="shop-fenlei-title"/>
+ 		<分类个数 type="xpath" value="//div[@id='shop_menu']/dl/dt"/>
+ 		<一级分类 type="xpath" value="//div[@id='shop_menu']/dl[2]/dt/s" />
+ 		<二级分类 type="xpath" value="//div[@id='shop_menu']/dl[2]/dd/ul/li[1]/a" />
+ 		<热销排行 type="xpath" value="//div[contains(text(),'热销排行')]" />
+ 		<店主推荐 type="xpath" value="//div[contains(text(),'店主推荐')]" />
+ 		<商品详情标题 type="id" value="tab1" />
+ 		<商品介绍 type="classname" value="p_detail"/>
+ 		<商品细节 type="xpath" value="//div[@id='p_detaillist_bottom']/div/div" />
+ 		<商品评价 type="id" value="tab2" />
+ 		<评价详情 type="id" value="prodEvaluation" />
+ 		<规格红框 type="id" value="skuSelected" />
+ 		<规格提示 type="id" value="selectSku" />
+ 		<关闭 type="classname" value="close"/>
+ 	</详情页_B2C>
+ 	<结算页_B2C>
+ 		<收货账号 type="xpath" value="//div[@class='cart_add_title title1']/span" />
+ 		<收货地址 type="xpath" value="//div[@class='cont']/span[@class='detail_addr']" />
+ 		<默认地址 type="xpath" value="//div[@class='cart_add_con']/span[@class='to_add']" />
+ 		<编辑 type="xpath" value="//div[@class='cart_add_con']/span[@class='_update updateAddress']" />
+ 		<新增收货地址 type="id" value="addb" />
+ 		<商铺名称 type="xpath" value="//td[@class='shop t1 tal']/a/span" />
+ 		<单价 type="xpath" value="//tr[@class='prods_detail']/td[3]" />
+ 		<数量 type="xpath" value="//span[@class='num_op']/span" />
+ 		<小计 type="id" value="ut_010231_0_00000000000000147535_00000000000000147535" />
+ 		<备注信息 type="xpath" value="//td[@class='t1 tal']/textarea" />
+ 		<快递 type="xpath" value="//span[@id='span_wq_radio']/span[1]" />
+ 		<自提 type="xpath" value="//span[@id='span_wq_radio']/span[2]" />
+ 		<总价 type="id" value="storePayPrice010231" />
+ 		<商品总金额 type="id" value="prodsPrice" />
+ 		<总运费 type="id" value="deliveryFee" />
+ 		<应付金额 type="id" value="totalPayPrice" />
+ 		<寄送至 type="id" value="go_bank_addr" />
+ 		<收货人 type="id" value="go_bank_name" />
+ 		<提交订单 type="id" value="submitOrder" />
+ 		<自提信息 type="id" value="Zi-conselected010231" />
+ 		<自提省份 type="id" value="provinceDiv" />
+ 		<自提市县 type="id" value="cityDiv" />
+ 		<自提区域 type="id" value="townDiv" />
+ 		<自提地址 type="xpath" value="//div[@class='J-con-xq to-the-place2']/ul/li/span" />
+ 		<宣外自提 type="xpath" value="//div[@class='J-con-xq to-the-place2']/ul/li[1]/span" />
+ 		<显示地址 type="xpath" value="//p[1]/font" />
+ 		<自提保存 type="xpath" value="//div[@class='btns clearfix']/div[1]" />
+ 		<自提取消 type="xpath" value="//div[@class='btns clearfix']/div[2]" />
+ 		<运费结算 type="id" value="deliveryFee010231" />
+ 		<使用卡卷 type="xpath" value="//div[@class='coupon-use']/h3/span" />
+ 		<卡卷类型 type="xpath" value="//div[@class='coupon-class']/h2/a" />
+ 		<电子卷内容 type="xpath" value="//div[@class='couponsElcD on couponsE']" />
+ 		<购物卡 type="id" value="doShopCard" />
+ 		<购物卡提示 type="xpath" value="//div[@class='Yh-zh clearfix pa-l']" />
+ 		<无购物卡 type="classname" value="no-shoppingcard" />
+ 		<购物卡号 type="id" value="sc_no" />
+ 		<购物卡密码 type="id" value="sc_password" />
+ 		<密码提示 type="xpath" value="//div[@class='pwd-field']/span[2]" />
+ 		<卡验证码 type="id" value="KeyPart" />
+ 		<绑定新卡 type="id" value="bingSc" />
+ 		<新建地址 type="id" value="addb" />
+ 		<地址标题 type="xpath" value="//p[@class='tit']/span"/>
+ 		<保存地址 type="id" value="saveAddress" />
+ 		<地址元素 type="xpath" value="//div[@id='editConsignee']/div/ul/li/label" />
+ 		<详细地址 type="id" value="consigneeDetailAddress" />
+ 		<收货手机 type="id" value="consigneeMobile" />
+ 		<收货姓名 type="id" value="consigneeName" />
+ 		<姓名显示 type="xpath" value="//div[@class='cont']/span" />
+ 		<更多地址 type="id" value="moreAddress_bottom" />
+ 		<预期默认 type="xpath" value="//div[@class='cont']/span[contains(text(),'15300085608')]" />
+ 		<设置默认 type="xpath" value="//span[contains(text(),'15300085608')]/../../div[4]/span[1]" />
+ 		<待删地址 type="xpath" value="//div[@class='cont']/span[contains(text(),'17084517777')]" />
+ 		<删除地址 type="xpath" value="//span[contains(text(),'17084517777')]/../../div[4]/span[@class='deladdress']" />
+ 	</结算页_B2C>
+ 	<订单页_B2C>
+ 		<订单编号 type="xpath" value="//div[@id='shouyintai']/div/p[2]/span[1]"/>	
+ 		<支付金额 type="xpath" value="//span[@class='pay_num']"/>
+ 		<收银台按钮 type="xpath" value="//div[@class='payCashier']/a"/>
+ 	</订单页_B2C>
+ 	<支付页面_B2C>
+ 		<支付金额 type="xpath" value="//span[@class='pay-money']"/>
+ 		<立即支付 type="id" value="buyNow"/>
+ 	</支付页面_B2C>
+ 	<我的订单页_B2C>
+		<全部订单 type="id" value="allOrder"/>
+		<待付款 type="id" value="noPay"/>
+		<待发货 type="id" value="noDeliver"/>
+		<待收货 type="id" value="noTake"/>
+		<待评价 type="id" value="noEut"/>
+		<订单回收站 type="xpath" value="//div[@class='ddzx-mt']/ul/li[6]/a"/>	
+	</我的订单页_B2C>
+	<我的商城页_B2C>
+		<用户名称 type="xpath" value="//h2/a"/>
+		<账户设置 type="xpath" value="//div[@class='dt']"/>
+		<个人信息 type="xpath" value="//div[@class='dd']/p[3]"/>
+		<用户名 type="id" value="useridinput"/>
+		<昵称 type="id" value="nickname"/>
+		<头像 type="id" value="prosecutionImg"/>
+		<男 type="xpath" value="//div[@class='item clearfix pdb30']/label[2]/input"/>
+		<女 type="xpath" value="//div[@class='item clearfix pdb30']/label[3]/input"/>
+		<手机 type="xpath" value="//div[@class='info lin28']/strong"/>
+		<修改 type="xpath" value="//div[@class='info lin28']/a"/>
+		<立即验证 type="xpath" value="//div[@class='fl mailbox lin28']/a"/>
+		<居住地省 type="id" value="provinceno"/>
+		<居住地市 type="id" value="cityno"/>
+		<注册时间 type="xpath" value="//div[@class='item clearfix pdb26 lin28']/div"/>
+		<保存 type="xpath" value="//div[@class='item clearfix pdb26']/a"/>
+		<地址管理 type="xpath" value="//div[@class='dd']/p[4]"/>
+		<新建收货地址 type="xpath" value="//div[@class='new_mbdy']/div/a/span"/>
+		<新建收货地址二 type="xpath" value="//div[@class='new_mbdy']/a/span"/>
+		<收货人 type="xpath" value="//table[@id='table_add']/tbody/tr/td"/>
+		<所在地 type="xpath" value="//table[@id='table_add']/tbody/tr/td[2]/div[@class='addr']"/>
+		<所在地二 type="xpath" value="//table[@id='table_add']/tbody/tr/td[2]/div[@class='ord']"/>
+		<街道地址 type="xpath" value="//table[@id='table_add']/tbody/tr/td[3]"/>
+		<邮编 type="xpath" value="//table[@id='table_add']/tbody/tr/td[4]"/>
+		<联系电话 type="xpath" value="//table[@id='table_add']/tbody/tr/td[5]"/>
+		<身份证号码 type="xpath" value="//table[@id='table_add']/tbody/tr/td[6]"/>
+		<状态 type="xpath" value="//table[@id='table_add']/tbody/tr/td[7]"/>
+		<设为默认 type="xpath" value="//table[@id='table_add']/tbody/tr/td[7]"/>
+		<操作修改 type="xpath" value="//table[@id='table_add']/tbody/tr/td[8]/a"/>
+		<新增关闭 type="xpath" value="//div[@class='cart_win']/p/a"/>
+		<新增收货人 type="id" value="consignee.consigneeName"/>
+		<新增地址别名 type="id" value="consignee.aliasName"/>
+		<新增家 type="xpath" value="//div[@class='prepared-sellect']/span[1]"/>
+		<新增公司 type="xpath" value="//div[@class='prepared-sellect']/span[2]"/>
+		<新增老家 type="xpath" value="//div[@class='prepared-sellect']/span[3]"/>
+		<新增学校 type="xpath" value="//div[@class='prepared-sellect']/span[4]"/>
+		<新增身份证号 type="id" value="consignee.idNumber"/>
+		<新增地区省 type="id" value="consigneeProvince"/>
+		<新增地区市 type="id" value="consigneeCity"/>
+		<新增地区区 type="id" value="consigneeCounty"/>
+		<新增详细地址 type="id" value="consignee.consigneeDetailAddress"/>
+		<新增邮政编码 type="id" value="consignee.consigneeZip"/>
+		<新增手机号 type="id" value="consignee.consigneeMobile"/>
+		<新增固定电话 type="id" value="consignee.consigneeTelephoneStr"/>
+		<保存收货人信息 type="id" value="button2"/>
+		<友情提示 type="id" value="alertInfo"/>
+		<友情提示确定 type="xpath" value="//div[@id='alertJqm']/div[3]/input"/>
+		<操作删除 type="xpath" value="//table[@id='table_add']/tbody/tr/td[8]/a[2]"/>
+		<操作删除二 type="xpath" value="//table[@id='table_add']/tbody/tr[2]/td[8]/a[2]"/>
+		<站内消息 type="xpath" value="//li[@class='inside_mes']/a"/>	
+		<待付款 type="classname" value="count_icon1"/>
+		<待发货 type="classname" value="count_icon2"/>
+		<待收货 type="classname" value="count_icon3"/>
+		<待评价 type="classname" value="count_icon4"/>
+		<会员等级 type="id" value="bpLevl"/>
+		<红包数量 type="id" value="redEnvelopeNumber"/>
+		<优惠券数量 type="id" value="couponNumber"/>
+		<购物卡数量 type="id" value="shoppingCardNumber"/>
+		<购物卡总额 type="id" value="card"/>
+		<查看全部订单 type="xpath" value="//div[@class='clm order_jq']/div/a"/>
+		<红包 type="xpath" value="//p[@class='vip_rank']/a[3]"/>
+		<优惠券 type="xpath" value="//p[@class='vip_rank']/a[4]"/>
+		<购物卡 type="xpath" value="//p[@class='p1']/a[1]/label[1]"/>
+		<缴水费 type="xpath" value="//li[@class='waterRate']/a"/>
+		<缴电费 type="xpath" value="//li[@class='charge']/a"/>
+		<煤气费 type="xpath" value="//li[@class='gasFee']/a"/>
+		<手机充值 type="xpath" value="//li[@class='cellular']/a"/>
+		<手机号码 type="id" value="phoneNumSend"/>
+		<充值金额20元 type="xpath" value="//li[@id='rvlistli']/a[1]"/>
+		<充值金额30元 type="xpath" value="//li[@id='rvlistli']/a[2]"/>
+		<充值金额50元 type="xpath" value="//li[@id='rvlistli']/a[3]"/>
+		<充值金额100元 type="xpath" value="//li[@id='rvlistli']/a[4]"/>
+		<充值金额200元 type="xpath" value="//li[@id='rvlistli']/a[5]"/>
+		<充值金额300元 type="xpath" value="//li[@id='rvlistli']/a[6]"/>
+		<支付金额 type="id" value="showTotalPayAmt"/>
+		<下一步 type="id" value="submitValueButton"/>
+		<我的收藏 type="xpath" value="//ul[@class='myshopMmenu']/li[3]/a"/>
+		<选择 type="name" value="favoriteProduct"/>
+		<商品图片 type="xpath" value="//table[@class='table_blue table_bor_no table_bt']/tbody/tr[2]/td[2]/a/img"/>
+		<商品名称 type="xpath" value="//table[@class='table_blue table_bor_no table_bt']/tbody/tr[2]/td[2]/p/a"/>
+		<标签 type="xpath" value="//table[@class='table_blue table_bor_no table_bt']/tbody/tr[2]/td[3]/p"/>
+		<单价 type="xpath" value="//table[@class='table_blue table_bor_no table_bt']/tbody/tr[2]/td[4]"/>
+		<收藏时间 type="xpath" value="//table[@class='table_blue table_bor_no table_bt']/tbody/tr[2]/td[5]"/>
+		<收藏人数 type="xpath" value="//table[@class='table_blue table_bor_no table_bt']/tbody/tr[2]/td[6]"/>
+		<查看详情 type="xpath" value="//table[@class='table_blue table_bor_no table_bt']/tbody/tr[2]/td[7]/a"/>
+		<收藏删除 type="xpath" value="//table[@class='table_blue table_bor_no table_bt']/tbody/tr[2]/td[7]/a[2]"/>
+		<收藏全选 type="id" value="checkedtable"/>
+		<批量取消收藏 type="xpath" value="//a[@id='batchDelete']/span"/>
+	</我的商城页_B2C>
+	<我的退款单_B2C>
+		<我的退款单 type="xpath" value="//ul[@class='myshopMmenu']/li[10]/a"/>
+		<待买家退还商品数量 type="xpath" value="//div[@class='coupons_tbg mt10 order_msg']/a/span"/>
+		<待买家修改退货信息数量 type="xpath" value="//div[@class='coupons_tbg mt10 order_msg']/a[2]/span"/>
+		<待买家确认退款数量 type="xpath" value="//div[@class='coupons_tbg mt10 order_msg']/a[3]/span"/>
+		<退款单状态 type="id" value="select_refundStatus"/>
+		<退款单申请时间开始 type="id" value="startRefundTime"/>
+		<退款单申请时间结束 type="id" value="endRefundTime"/>
+		<退款单编号 type="id" value="refundId"/>
+		<订单编号 type="id" value="orderId"/>
+		<查询 type="id" value="btn_select"/>
+		<表格退款单编号 type="xpath" value="//table[@class='table_blue table_nofixed']/thead/tr/th/span/a"/>
+		<表格订单编号 type="xpath" value="//table[@class='table_blue table_nofixed']/thead/tr/th/span[2]/a"/>
+		<表格交易时间 type="xpath" value="//table[@class='table_blue table_nofixed']/thead/tr/th/span[3]"/>
+		<表格商品图片 type="xpath" value="//table[@class='table_blue table_nofixed']/tbody/tr/td/a/img"/>
+		<表格商品名称 type="xpath" value="//table[@class='table_blue table_nofixed']/tbody/tr/td/p/a"/>
+		<表格商品数量 type="xpath" value="//table[@class='table_blue table_nofixed']/tbody/tr/td[2]"/>
+		<表格退款申请金额 type="xpath" value="//table[@class='table_blue table_nofixed']/tbody/tr/td[3]/span/strong"/>
+		<表格退款状态 type="xpath" value="//table[@class='table_blue table_nofixed']/tbody/tr/td[4]/p"/>
+		<表格退款申请时间 type="xpath" value="//table[@class='table_blue table_nofixed']/tbody/tr/td[5]"/>
+		<表格其它操作详情 type="xpath" value="//table[@class='table_blue table_nofixed']/tbody/tr/td[7]/a/strong"/>
+		<表格其它操作和我联系 type="xpath" value="//table[@class='table_blue table_nofixed']/tbody/tr/td[7]/a[2]/span"/>
+	</我的退款单_B2C>
+	<网站导航_B2C>
+		<肉禽蛋奶 type="xpath" value="//li[@class='farmproduct']/nav/a[1]"/>
+		<米面杂粮 type="xpath" value="//li[@class='farmproduct']/nav/a[2]"/>
+		<熟食面点 type="xpath" value="//li[@class='farmproduct']/nav/a[3]"/>
+		<方便速食 type="xpath" value="//li[@class='farmproduct']/nav/a[4]"/>
+		<厨房调味 type="xpath" value="//li[@class='farmproduct']/nav/a[5]"/>
+		<腊味干货 type="xpath" value="//li[@class='farmproduct']/nav/a[6]"/>
+		<饮料冲调 type="xpath" value="//li[@class='farmproduct']/nav/a[7]"/>
+		<休闲零食 type="xpath" value="//li[@class='farmproduct']/nav/a[8]"/>
+		<营养保健 type="xpath" value="//li[@class='farmproduct']/nav/a[9]"/>
+		<中外名酒 type="xpath" value="//li[@class='farmproduct']/nav/a[10]"/>
+		<海鲜水产 type="xpath" value="//li[@class='farmproduct']/nav/a[11]"/>
+		<时令鲜蔬 type="xpath" value="//li[@class='farmproduct']/nav/a[12]"/>
+		<新鲜水果 type="xpath" value="//li[@class='farmproduct']/nav/a[13]"/>
+		<四季茗茶 type="xpath" value="//li[@class='farmproduct']/nav/a[14]"/>
+		<生活日用 type="xpath" value="//li[@class='online']/nav/a[1]"/>
+		<精品家纺 type="xpath" value="//li[@class='online']/nav/a[2]"/>
+		<纸品湿巾 type="xpath" value="//li[@class='online']/nav/a[3]"/>
+		<厨具日用 type="xpath" value="//li[@class='online']/nav/a[4]"/>
+		<面部护理 type="xpath" value="//li[@class='online']/nav/a[5]"/>
+		<洗发护发 type="xpath" value="//li[@class='online']/nav/a[6]"/>
+		<香水彩妆 type="xpath" value="//li[@class='online']/nav/a[7]"/>
+		<身体护肤 type="xpath" value="//li[@class='online']/nav/a[8]"/>
+		<家庭清洁 type="xpath" value="//li[@class='online']/nav/a[9]"/>
+		<口腔护理 type="xpath" value="//li[@class='online']/nav/a[10]"/>
+		<时尚女装 type="xpath" value="//li[@class='online']/nav/a[11]"/>
+		<精品男装 type="xpath" value="//li[@class='online']/nav/a[12]"/>
+		<鲜花礼品 type="xpath" value="//li[@class='online']/nav/a[13]"/>
+		<家用电器 type="xpath" value="//li[@class='online']/nav/a[14]"/>
+		<潮流鞋靴 type="xpath" value="//li[@class='online']/nav/a[15]"/>
+		<电脑外设 type="xpath" value="//li[@class='online']/nav/a[16]"/>
+		<精品箱包 type="xpath" value="//li[@class='online']/nav/a[17]"/>
+		<办公用品 type="xpath" value="//li[@class='online']/nav/a[18]"/>
+		<袜子配饰 type="xpath" value="//li[@class='online']/nav/a[19]"/>
+		<母婴护理 type="xpath" value="//li[@class='online']/nav/a[20]"/>
+		<汽车用品 type="xpath" value="//li[@class='online']/nav/a[21]"/>
+		<供销e购卡 type="xpath" value="//li[@class='online']/nav/a[22]"/>
+		<肥料 type="xpath" value="//li[@class='farmshop']/nav/a[1]"/>
+		<农药 type="xpath" value="//li[@class='farmshop']/nav/a[2]"/>
+		<农机具 type="xpath" value="//li[@class='farmshop']/nav/a[3]"/>
+		<土地 type="xpath" value="//li[@class='farmshop']/nav/a[4]"/>
+		<苗木 type="xpath" value="//li[@class='farmshop']/nav/a[5]"/>
+		<种子 type="xpath" value="//li[@class='farmshop']/nav/a[6]"/>
+		<农业服务 type="xpath" value="//li[@class='farmshop']/nav/a[7]"/>
+	</网站导航_B2C>
+	<友情链接_B2C>
+		<供销业务 type="xpath" value="//div[@class='helper clearfix']/ul/li[1]/dl/dd/a"/>
+		<供销e通 type="linktext" value="供销e通"/>
+		<供销e批 type="linktext" value="供销e批"/>
+		<农资农服 type="linktext" value="农资农服"/>
+		<新手上路 type="xpath" value="//div[@class='helper clearfix']/ul/li[2]/dl/dd/a"/>
+    	<初次到访 type="linktext" value="初次到访"/>
+    	<关于我们 type="linktext" value="关于我们"/>
+    	<友情链接 type="linktext" value="友情链接"/>
+    	<购物指南 type="xpath" value="//div[@class='helper clearfix']/ul/li[3]/dl/dd/a"/>
+    	<配送服务 type="xpath" value="//div[@class='helper clearfix']/ul/li[4]/dl/dd/a"/>
+    	<售后保障 type="xpath" value="//div[@class='helper clearfix']/ul/li[5]/dl/dd/a"/>
+    	<商家入驻 type="xpath" value="//div[@class='helper clearfix']/ul/li[6]/dl/dd/a"/>
+	    <版权所有 type="xpath" value="//div[@class='copyright']/span" />
+	    <扫码地址 type="xpath" value=" //li[@class='clearfix']/h4" />
+	</友情链接_B2C>
+	<帮助页面_B2C>
+		<帮助列表 type="xpath" value="//div[@class='nav_buy']/dl/dt" />
+		<地方平台 type="xpath" value="//div[@class='nav_buy']/dl[1]/dt" />
+		<判定平台 type="xpath" value="//div[@class='nav_buy']/dl[1]/dd/span[1]/a" />
+		<平台简介 type="xpath" value="//div[@class='nav_buy']/dl[1]/dd/span[2]/a" />
+		<商户登录 type="xpath" value="//div[@class='nav_buy']/dl[2]/dt" />
+		<商户入口 type="xpath" value="//div[@class='nav_buy']/dl[2]/dd/span[1]/a" />
+		<广告服务 type="xpath" value="//div[@class='nav_buy']/dl[3]/dt" />	
+		<收费标准 type="xpath" value="//div[@class='nav_buy']/dl[3]/dd/span[1]/a" /> 
+		<客服服务 type="xpath" value="//div[@class='nav_buy']/dl[4]/dt" />
+		<联系客服 type="xpath" value="//div[@class='nav_buy']/dl[4]/dd/span[1]/a" /> 
+		<购物指南 type="xpath" value="//div[@class='nav_buy']/dl[5]/dt" />
+		<购物流程 type="xpath" value="//div[@class='nav_buy']/dl[5]/dd/span[1]/a" /> 
+		<注册账号 type="xpath" value="//div[@class='nav_buy']/dl[5]/dd/span[2]/a" /> 
+		<快捷下单 type="xpath" value="//div[@class='nav_buy']/dl[5]/dd/span[3]/a" /> 
+		<修改密码 type="xpath" value="//div[@class='nav_buy']/dl[5]/dd/span[4]/a" /> 
+		<完善信息 type="xpath" value="//div[@class='nav_buy']/dl[5]/dd/span[5]/a" /> 
+		<参加促销 type="xpath" value="//div[@class='nav_buy']/dl[5]/dd/span[6]/a" /> 
+		<评价晒单 type="xpath" value="//div[@class='nav_buy']/dl[5]/dd/span[7]/a" /> 
+		<公司简介 type="xpath" value="//div[@class='nav_buy']/dl[6]/dt" />
+		<经营证照 type="xpath" value="//div[@class='nav_buy']/dl[6]/dd/span[1]/a" /> 
+		<关于我们 type="xpath" value="//div[@class='nav_buy']/dl[6]/dd/span[2]/a" /> 
+		<商户入驻 type="xpath" value="//div[@class='nav_buy']/dl[7]/dt" />
+		<禁售商品 type="xpath" value="//div[@class='nav_buy']/dl[7]/dd/span[1]/a" /> 
+		<入驻流程 type="xpath" value="//div[@class='nav_buy']/dl[7]/dd/span[2]/a" /> 
+		<入住须知 type="xpath" value="//div[@class='nav_buy']/dl[7]/dd/span[3]/a" /> 
+		<售后保障 type="xpath" value="//div[@class='nav_buy']/dl[8]/dt" />
+		<发票制度 type="xpath" value="//div[@class='nav_buy']/dl[8]/dd/span[1]/a" /> 
+		<退货流程 type="xpath" value="//div[@class='nav_buy']/dl[8]/dd/span[2]/a" /> 
+		<退货规则 type="xpath" value="//div[@class='nav_buy']/dl[8]/dd/span[3]/a" /> 
+		<支付及配送 type="xpath" value="//div[@class='nav_buy']/dl[9]/dt" />
+		<支付方式 type="xpath" value="//div[@class='nav_buy']/dl[9]/dd/span[1]/a" /> 
+		<支付失败 type="xpath" value="//div[@class='nav_buy']/dl[9]/dd/span[2]/a" /> 
+		<发票规则 type="xpath" value="//div[@class='nav_buy']/dl[9]/dd/span[3]/a" /> 
+		<物流信息 type="xpath" value="//div[@class='nav_buy']/dl[9]/dd/span[4]/a" /> 
+		<发货时效 type="xpath" value="//div[@class='nav_buy']/dl[9]/dd/span[5]/a" /> 
+		<配送标准 type="xpath" value="//div[@class='nav_buy']/dl[9]/dd/span[6]/a" /> 
+		<签收验货 type="xpath" value="//div[@class='nav_buy']/dl[9]/dd/span[7]/a" /> 
+		<新手入门 type="xpath" value="//div[@class='nav_buy']/dl[10]/dt" />
+		<交易条款 type="xpath" value="//div[@class='nav_buy']/dl[10]/dd/span[1]/a" /> 
+		<隐私协议 type="xpath" value="//div[@class='nav_buy']/dl[10]/dd/span[2]/a" /> 
+		<初次到访 type="xpath" value="//div[@class='nav_buy']/dl[10]/dd/span[3]/a" /> 
+	</帮助页面_B2C>
+		<!-- B2C web端统一alert弹窗提示 -->
+	<提示信息_B2C>
+		<提示内容 type="id" value="alertInfo" />
+		<关闭按钮 type="xpath" value="//div[@class='delpop-t']/i" />
+		<确定按钮 type="id" value="bt_save" />
+		<提示隐藏 type="id" value="alertJqm" />
+		<关闭地址提示 type="xpath" value="//div[@id='alertJqm']/div[1]/i"/>
+	</提示信息_B2C>
+	
+</对象库> 	

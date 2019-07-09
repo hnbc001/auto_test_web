@@ -1,0 +1,17 @@
+/**
+ * @author chihongyuan
+ * 首页寻真展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App005_Index_Chihy extends TestBase {
+
+	@Test
+	public void seek() {
+		
+		checkPoint.equals(locator.getTextByUIA("寻真"), "寻真", "【fail】005首页寻真栏位展示失败");
+		checkPoint.result("【pass】005首页寻真栏位展示成功");
+	}
+}

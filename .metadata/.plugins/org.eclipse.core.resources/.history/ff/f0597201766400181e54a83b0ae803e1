@@ -1,0 +1,24 @@
+/**
+ * @author chihongyuan
+ * 详情页展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App018_Details_Chihy extends TestBase {
+
+	@Test
+	public void selected() {
+		
+		boolean flag = false;
+		try {
+			flag = locator.elementIsExist("详情页", "已选");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		checkPoint.equals(flag, true, "【fail】018详情页已选展示失败");
+		checkPoint.result("【pass】018详情页已选展示成功");
+	}
+}

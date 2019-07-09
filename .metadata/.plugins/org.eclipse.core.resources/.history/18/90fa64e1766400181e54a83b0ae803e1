@@ -1,0 +1,29 @@
+/**
+ * @author chihongyuan
+ * 活动页展示
+ */
+package com.gxyj.app;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class App028_Activity_Chihy extends TestBase {
+
+	@Test
+	public void countDown() {
+		
+		locator.clickByXml("页脚导航", "首页");
+		String text = null;
+		
+		try {
+			text = locator.getTextByUIA("距结束123");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Reporter.log("【fail】028活动倒计时展示失败");
+		}
+		
+		checkPoint.equals(text, "距结束", "【fail】028活动倒计时展示失败");
+		checkPoint.result("【pass】028活动倒计时展示成功");
+	}
+}

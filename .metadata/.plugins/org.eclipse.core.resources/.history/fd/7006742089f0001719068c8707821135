@@ -1,0 +1,7 @@
+package com.hnbc.forever005;
+
+public class TestToString {
+
+	String string;
+	
+}

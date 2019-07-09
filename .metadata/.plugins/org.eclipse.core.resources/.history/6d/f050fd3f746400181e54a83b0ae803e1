@@ -1,0 +1,17 @@
+/**
+ * @author chihongyuan
+ * 列表页展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App014_List_Chihy extends TestBase {
+
+	@Test
+	public void list() {
+		locator.clickByUIA("肉禽蛋奶");
+		checkPoint.equals(locator.getTextByUIA("鲜猪肉")!=null, true, "【fail】014APP列表页2展示失败");
+		checkPoint.result("【pass】014APP列表页2展示正常");
+	}
+}

@@ -1,0 +1,19 @@
+/**
+ * @author chihongyuan
+ * 列表页展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+import com.gxyj.util.TestBase;
+
+public class App099_List_Chihy extends TestBase {
+
+	@Test
+	public void list() {
+		locator.clickByUIA("海鲜水产");
+		checkPoint.equals(locator.getTextByUIA("鲫鱼")!=null, true, "【fail】099APP列表页3展示失败");
+		checkPoint.result("【pass】099APP列表页3展示正常");
+	}
+}

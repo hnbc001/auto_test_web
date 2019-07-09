@@ -1,0 +1,138 @@
+package com.gxyj.util;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.IExecutionListener;
+import org.testng.IReporter;
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
+import org.testng.ISuiteResult;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestNGMethod;
+import org.testng.ITestResult;
+import org.testng.xml.XmlSuite;
+
+public class MyListener implements ISuiteListener, IExecutionListener, ITestListener, IReporter{
+
+	@Override
+	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
+		// TODO Auto-generated method stub
+		int total = suites.get(0).getAllMethods().size();
+		int pass = 0;
+		int fail = 0;
+		int skip = 0;
+		
+		Map<String, ISuiteResult> map = suites.get(0).getResults();
+		for (String key : map.keySet()) {
+			ISuiteResult result = map.get(key);
+			pass = result.getTestContext().getPassedTests().size();
+			fail = result.getTestContext().getFailedTests().size();
+			skip = result.getTestContext().getSkippedTests().size();
+		}
+		
+	}
+
+	@Override
+	public void onTestStart(ITestResult result) {
+		// TODO Auto-generated method stub
+		System.out.println("MyListener.onTestStart()");
+		System.out.println(result.getName());
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		// TODO Auto-generated method stub
+		System.out.println("MyListener.onTestSuccess()");
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+		// TODO Auto-generated method stub
+		System.out.println("MyListener.onTestFailure()");
+		File file = ((TakesScreenshot)TestBase.driver).getScreenshotAs(OutputType.FILE);
+		Date date = new Date();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddhh");
+		String fileName = result.getName() + "_" + simpleDateFormat.format(date) + ".png";
+		try {
+			FileUtils.copyFile(file, new File("./screenshots/" + fileName));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		// TODO Auto-generated method stub
+		System.out.println("MyListener.onTestSkipped()");
+	}
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		System.out.println("MyListener.onTestFailedButWithinSuccessPercentage()");
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+		// TODO Auto-generated method stub
+		System.out.println("MyListener.onStart()");
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+		// TODO Auto-generated method stub
+		System.out.println("MyListener.onFinish()");
+		Iterator<ITestResult> failedTests = context.getFailedTests().getAllResults().iterator();	
+		while (failedTests.hasNext()) {
+			ITestResult result = failedTests.next();		
+			if(context.getFailedTests().getResults(result.getMethod()).size()>1){
+				failedTests.remove();
+			}else{
+				if(context.getPassedTests().getResults(result.getMethod()).size() > 0){
+					failedTests.remove();
+				}
+			}	
+		}
+	}
+
+	@Override
+	public void onExecutionStart() {
+		// TODO Auto-generated method stub
+		System.out.println("Testng开始执行");
+	}
+
+	@Override
+	public void onExecutionFinish() {
+		// TODO Auto-generated method stub
+		System.out.println("Testng结束执行");
+	}
+
+	@Override
+	public void onStart(ISuite suite) {
+		// TODO Auto-generated method stub
+		System.out.println("正在为所有案例添加失败重跑机制");
+		List<ITestNGMethod> methods = suite.getAllMethods();
+		for (ITestNGMethod method : methods) {
+			method.setRetryAnalyzer(new Retry());
+		}
+		
+		System.out.println("测试套件开始执行");
+	}
+
+	@Override
+	public void onFinish(ISuite suite) {
+		// TODO Auto-generated method stub
+		System.out.println("测试套件结束执行");
+	}
+}

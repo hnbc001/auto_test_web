@@ -1,0 +1,37 @@
+package com.gxyj.util;
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+
+public class TestBase {
+	protected static WebDriver driver = null;
+	protected CheckPoint checkPoint = null;
+	protected static Locator locator = null;
+	
+
+	@BeforeTest
+	@Parameters({"type", "path"})
+	public void openBrowser(String type, String path){
+		
+		driver = DriverFactory.createFactory(type, path);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		locator = new Locator(driver, path);
+	}
+	
+	@BeforeMethod
+	public void check(){
+		checkPoint = new CheckPoint();
+	}
+	
+	@AfterTest
+	public void closeBrowser(){
+		
+		driver.close();
+		driver.quit();
+	}
+}

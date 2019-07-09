@@ -1,0 +1,22 @@
+package com.hnbc.forever005;
+
+public class TestToString {
+
+	String string;
+	
+	public TestToString(String string){
+		
+		this.string = string;
+	}
+	
+	public static void main(String[] args) {
+		
+		TestToString testToString1 = new TestToString("aaa");
+		TestToString testToString2 = new TestToString("aaa");
+		TestToString testToString3 = new TestToString("bbb");
+		
+		System.out.println(testToString1.toString());
+		System.out.println(testToString2.toString());
+		System.out.println(testToString3.toString());
+  	}
+}

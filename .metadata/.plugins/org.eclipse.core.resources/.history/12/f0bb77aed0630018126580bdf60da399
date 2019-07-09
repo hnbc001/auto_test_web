@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="供销e家自动化测试">
+  <listeners>
+  	<listener class-name="com.gxyj.util.MyListener"/>
+  </listeners>  
+  <test verbose="2" name="gxyjTest">
+    <classes>
+      <class name="com.gxyj.app.App001_Index_Chihy"/>
+      <class name="com.gxyj.app.App002_Index_Chihy"/>
+      <class name="com.gxyj.app.App003_Index_Chihy"/>
+      <class name="com.gxyj.app.App004_Index_Chihy"/>
+      <class name="com.gxyj.app.App005_Index_Chihy"/>
+      <class name="com.gxyj.app.App006_Index_Chihy"/>
+      <class name="com.gxyj.app.App007_Index_Chihy"/>
+      <class name="com.gxyj.app.App008_Index_Chihy"/>
+      <class name="com.gxyj.app.App009_Index_Chihy"/>
+      <class name="com.gxyj.app.App010_Index_Chihy"/>
+      <class name="com.gxyj.app.App011_Index_Chihy"/>
+      <class name="com.gxyj.app.App012_Index_Chihy"/>
+      <class name="com.gxyj.app.App013_List_Chihy"/>
+      <class name="com.gxyj.app.App014_List_Chihy"/>
+      <class name="com.gxyj.app.App015_List_Chihy"/>
+      <class name="com.gxyj.app.App016_Details_Chihy"/>
+      <class name="com.gxyj.app.App017_Details_Chihy"/>
+      <class name="com.gxyj.app.App018_Details_Chihy"/>
+      <class name="com.gxyj.app.App019_Details_Chihy"/>
+      <class name="com.gxyj.app.App020_Details_Chihy"/>
+      <class name="com.gxyj.app.App021_Details_Chihy"/>
+      <class name="com.gxyj.app.App022_Details_Chihy"/>
+      <class name="com.gxyj.app.APP023_ShoppingCart_Chihy"/>
+      <class name="com.gxyj.app.App024_ShoppingCart_Chihy"/>
+      <class name="com.gxyj.app.App025_ShoppingCart_Chihy"/>
+      <class name="com.gxyj.app.APP026_ShoppingCart_Chihy"/>
+      <class name="com.gxyj.app.App027_ShoppingCart_Chihy"/>
+      <class name="com.gxyj.app.App028_Activity_Chihy"/>
+      <class name="com.gxyj.app.App029_Activity_Chihy"/>
+      <class name="com.gxyj.app.App030_Activity_Chihy"/>
+      <class name="com.gxyj.app.App031_OrderPage_Chihy"/>
+      <class name="com.gxyj.app.App032_OrderPage_Chihy"/>
+      <class name="com.gxyj.app.App033_OrderPage_Chihy"/>
+      <class name="com.gxyj.app.App034_OrderPage_Chihy"/>
+      <!-- <class name="com.gxyj.app.App100_Search_Chihy"/> -->
+    </classes>
+  </test>
+</suite>

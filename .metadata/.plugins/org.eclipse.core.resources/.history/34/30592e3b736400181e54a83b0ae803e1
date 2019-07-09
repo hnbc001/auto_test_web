@@ -1,0 +1,17 @@
+/**
+ * @author chihongyuan
+ * 首页购物车导航栏展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App011_Index_Chihy extends TestBase {
+
+	@Test
+	public void shoppingCart() {
+		
+		checkPoint.equals(locator.elementIsExist("页脚导航", "购物车"), true, "【fail】011页脚导航购物车栏位展示失败");
+		checkPoint.result("【pass】011页脚导航购物车栏位展示成功");
+	}
+}

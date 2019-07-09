@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [供销e家web端自动化测试]">
+  <listeners>
+    <listener class-name="com.gxyj.util.MyListener"/>
+  </listeners>
+  <test name="gxyjTest(failed)">
+    <classes>
+      <class name="com.gxyj.web.Web01">
+        <methods>
+          <include name="tearDown"/>
+          <include name="check"/>
+          <include name="index"/>
+          <include name="tesrUp"/>
+        </methods>
+      </class> <!-- com.gxyj.web.Web01 -->
+      <class name="com.gxyj.web.Web02">
+        <methods>
+          <include name="check"/>
+        </methods>
+      </class> <!-- com.gxyj.web.Web02 -->
+    </classes>
+  </test> <!-- gxyjTest(failed) -->
+</suite> <!-- Failed suite [供销e家web端自动化测试] -->

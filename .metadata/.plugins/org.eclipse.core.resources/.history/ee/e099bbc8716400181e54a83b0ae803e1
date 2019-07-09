@@ -1,0 +1,20 @@
+/**
+ * @author chihongyuan
+ * 首页热卖展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App004_Index_Chihy extends TestBase {
+
+	@Test
+	public void hotSale() {
+		
+		String text = null;
+		text = locator.getTextByUIA("热卖");
+		checkPoint.equals(text, "热卖", "【fail】004首页热卖栏位展示失败");
+		checkPoint.result("【pass】004首页热卖栏位展示成功");
+		
+	}
+}

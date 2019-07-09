@@ -1,0 +1,29 @@
+/**
+ * @author chihongyuan
+ * 详情页展示
+ */
+package com.gxyj.app;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class App052_Details_Chihy extends TestBase {
+
+	@Test
+	public void recommend() {
+		
+		String text = null;
+		
+		try {
+			text = locator.getTextByUIA("店铺推荐1");
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Reporter.log("【fail】052详情页店铺推荐展示失败");
+			
+		}
+		checkPoint.equals(text, "店铺推荐", "【fail】052详情页店铺推荐展示失败");
+		checkPoint.result("【pass】052详情页店铺推荐展示成功");	
+	}
+}

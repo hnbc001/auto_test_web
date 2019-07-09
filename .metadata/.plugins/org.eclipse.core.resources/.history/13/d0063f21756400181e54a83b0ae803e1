@@ -1,0 +1,18 @@
+/**
+ * @author chihongyuan
+ * 详情页展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App016_Details_Chihy extends TestBase{
+	@Test
+	public void productImage() {
+		
+		locator.clickByUIA("首页");
+		locator.clickByXml("首页", "商品");
+		checkPoint.equals(locator.elementIsExist("详情页", "商品图片"), true, "【fail】016详情页图片展示失败");
+		checkPoint.result("【pass】016详情页图片展示成功");
+	}
+}

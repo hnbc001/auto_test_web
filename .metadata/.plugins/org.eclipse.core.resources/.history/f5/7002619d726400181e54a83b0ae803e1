@@ -1,0 +1,26 @@
+/**
+ * @author chihongyuan
+ * 首页图标展示
+ */
+package com.gxyj.app;
+
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class App002_Index_Chihy extends TestBase {
+
+	@Test
+	public void logo() {
+		locator.clickByUIA("首页");
+		boolean flag = false;
+		try {
+			flag = locator.elementIsExist("首页", "图标");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Reporter.log( "【fail】002首页图标展示失败");
+		}
+		checkPoint.equals(flag, true, "【fail】002首页图标展示失败");
+		checkPoint.result("【pass】002首页图标展示成功");
+	}
+}

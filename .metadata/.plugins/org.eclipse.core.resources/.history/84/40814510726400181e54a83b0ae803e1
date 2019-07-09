@@ -1,0 +1,17 @@
+/**
+ * @author chihongyuan
+ * 首页扶贫专区展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App007_Index_Chihy extends TestBase {
+
+	@Test
+	public void povertyAlleviation() {
+		
+		checkPoint.equals(locator.getTextByUIA("扶贫专区"), "扶贫专区", "【fail】007首页扶贫专区栏位展示失败");
+		checkPoint.result("【pass】007首页扶贫专区栏位展示成功");
+	} 
+}

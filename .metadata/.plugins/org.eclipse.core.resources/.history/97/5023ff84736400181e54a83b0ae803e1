@@ -1,0 +1,17 @@
+/**
+ * @author chihongyuan
+ * 首页我的导航栏展示
+ */
+package com.gxyj.app;
+
+import org.testng.annotations.Test;
+
+public class App012_Index_Chihy extends TestBase {
+
+	@Test
+	public void mine() {
+		
+		checkPoint.equals(locator.elementIsExist("页脚导航", "我的"), true, "【fail】012页脚导航我的栏位展示失败");
+		checkPoint.result("【pass】012页脚导航我的栏位展示成功");
+	}
+}

@@ -1,0 +1,37 @@
+package com.gxyj.app;
+
+import java.net.URL;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import com.android.uiautomator.core.UiSelector;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class App01 {
+
+	@Test
+	public void login() throws Exception{
+		URL url = new URL("http://127.0.0.1:4723/wd/hub");
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("deviceName", "APP");
+		capabilities.setCapability("appPackage", "com.i2f.emallmobile");
+		capabilities.setCapability("appActivity", ".ui.MainActivity");
+		capabilities.setCapability("unicodeKeyboard", true);	
+		AndroidDriver driver = new AndroidDriver(url, capabilities);
+		driver.findElementByAndroidUIAutomator("new UiSelector().text(\"我的\")").click();
+		driver.findElementByAndroidUIAutomator("new UiSelector().text(\"登录\")").click();
+		driver.findElementById("com.i2f.emallmobile:id/iv_deleteMobile").click();
+		driver.findElementByAndroidUIAutomator("new UiSelector().text(\"请输入手机号/用户名/邮箱\")").sendKeys("13611111111");
+		driver.findElementByAndroidUIAutomator("new UiSelector().text(\"请输入密码\")").sendKeys("1111qqqq");
+		driver.findElementByAndroidUIAutomator("new UiSelector().text(\"登录\")").click();
+		String username = driver.findElementById("com.i2f.emallmobile:id/mall_user_name_login").getText();
+		driver.findElementByAndroidUIAutomator()
+		if (username.equals("gxyj_z7k012t9p1w...")) {
+			System.out.println("pass");
+		} else {
+			System.out.println("fail");
+		}
+	}
+}

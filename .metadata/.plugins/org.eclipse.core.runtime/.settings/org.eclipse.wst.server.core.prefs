@@ -1,0 +1,4 @@
+TerminalPrefInvertColors=true
+eclipse.preferences.version=1
+module-start-timeout=300000
+overriddenByCSS=,TerminalPrefInvertColors,
